@@ -40,7 +40,7 @@ export default function Card({ product }) {
                   Router.push("/login");
                 } else {
                   const response = await axios.post(
-                    "http://localhost:5000/",
+                    "https://fakestorapi.herokuapp.com/",
                     {
                       query: `query Query($getProductId: ID!) {
                       getProduct(id: $getProductId) {
@@ -71,7 +71,7 @@ export default function Card({ product }) {
                     response.data.data.getProduct.description
                   );
                   const res = await axios.post(
-                    "http://localhost:5000/",
+                    "https://fakestorapi.herokuapp.com/",
                     {
                       query: `mutation Mutation($userId: String!, $product: Productt) {
                         addWishlist(userId: $userId, product: $product) {
@@ -118,7 +118,7 @@ export default function Card({ product }) {
               className="btn btn-outline-dark btn-sm"
               onClick={async (e) => {
                 const response = await axios.post(
-                  "http://localhost:5000/",
+                  "https://fakestorapi.herokuapp.com/",
                   {
                     query: `query Query($getProductId: ID!) {
                     getProduct(id: $getProductId) {
