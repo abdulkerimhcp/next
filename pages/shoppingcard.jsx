@@ -1,17 +1,17 @@
 import Layout from "../components/layout";
 import Link from "next/link";
 import Image from "next/image";
-import SCard from "../components/ShoppingCard/ShoppingCard";
+
 import { useState, useEffect } from "react";
 
 export default function ShoppingCard() {
-  const [products, setProducts] = useState(null);
+  // const [products, setProducts] = useState(null);
 
-  useEffect(() => {
-    const response = window.localStorage.getItem("shoppingCard");
-    const product = JSON.parse(response);
-    setProducts(product);
-  }, []);
+  // useEffect(() => {
+  //   const response = window.localStorage.getItem("shoppingCard");
+  //   const product = JSON.parse(response);
+  //   setProducts(product);
+  // }, []);
 
   return (
     <Layout>
